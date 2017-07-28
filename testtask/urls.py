@@ -25,5 +25,5 @@ router.register(r'campaigns', views.CampaignViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest-framework.urls', namespace='rest-framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
