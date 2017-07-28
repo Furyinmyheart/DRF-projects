@@ -1,9 +1,13 @@
-from django.shortcuts import render
-from .models import campaign
-from .models import channel
+from rest_framework import viewsets
+from .serializers import ChannelSerializer
+from .models import Campaign
+from .models import Channel
 
-def campaing_view():
-    return render(request=campaign, index.html)
+class ChannelViewSet(viewsets.ModelViewSet):
 
-def channel_view():
-    return render(request=channel, index.html)
+    queryset = Channel.objects.all()
+    serializer_class = ChannelSerializer
+
+class CampaignViewSet(viewsets.ModelViewSet):
+
+    queryset = Campaign.objects.all()

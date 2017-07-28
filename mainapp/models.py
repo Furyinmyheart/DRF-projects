@@ -1,12 +1,12 @@
 from django.db import models
 
-class channel(models.Model):
+class Channel(models.Model):
     Name = models.CharField(max_length=32)
     Slug = models.CharField(max_length=32)
     BidTypes = models.TextField()
 
-class campaign(models.Model):
+class Campaign(models.Model):
     Name = models.CharField(max_length=32)
-    Channel = models.ForeignKey(channel)
+    Channel = models.ForeignKey(Channel)
     Bid = models.FloatField()
     BidTypes = models.TextField()
