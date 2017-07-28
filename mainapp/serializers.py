@@ -1,6 +1,6 @@
+from rest_framework import serializers
 from .models import Channel
 from .models import Campaign
-from rest_framework import serializers
 
 
 class ChannelSerializer(serializers.HyperlinkedModelSerializer):
