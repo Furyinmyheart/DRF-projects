@@ -8,6 +8,7 @@ class ChannelSerializer(serializers.HyperlinkedModelSerializer):
         model = Channel
         fields = ('Name', 'Slug', 'BidTypes')
 
+        
 class CampaignSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Campaign
